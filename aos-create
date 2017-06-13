@@ -1,0 +1,7 @@
+oc delete project aos-ci
+echo "sleeping for 60 secs"
+sleep 60
+oc new-project aos-ci --display-name="AOS CI/CD"
+oc policy add-role-to-user edit -z default -n aos-ci
+oc create -f aos-jenkins-master-s2i-template.yaml
+oc new-app jenkins-persistent
