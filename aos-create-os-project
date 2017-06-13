@@ -1,3 +1,4 @@
+#/bin/bash
 oc delete project aos-ci
 echo "sleeping for 60 secs"
 sleep 60
