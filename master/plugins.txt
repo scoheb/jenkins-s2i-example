@@ -41,6 +41,7 @@ handlebars:1.1.1
 icon-shim:2.0.3
 jackson2-api:2.7.3
 javadoc:1.4
+jms-messaging:1.0.20
 job-dsl:1.63
 jquery-detached:1.2.1
 junit:1.20
