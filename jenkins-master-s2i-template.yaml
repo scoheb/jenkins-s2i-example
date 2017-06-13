@@ -14,7 +14,7 @@ parameters:
 - description: Git source URI for Jenkins S2I
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://github.com/siamaksade/jenkins-s2i-example.git
+  value: https://github.com/scoheb/jenkins-s2i-example.git
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
   value: master
@@ -24,7 +24,7 @@ parameters:
 - description: Maximum amount of memory the container can use.
   displayName: Memory Limit
   name: MEMORY_LIMIT
-  value: 1Gi
+  value: 256Mi
 - description: Password for the Jenkins user.
   displayName: Jenkins Password
   generate: expression
@@ -100,7 +100,7 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: jenkins:1
+          name: jenkins:2
           namespace: openshift
       type: Source
     triggers:
